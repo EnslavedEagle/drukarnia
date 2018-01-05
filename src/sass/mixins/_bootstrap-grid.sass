@@ -1,0 +1,21 @@
+=row
+  @extend .row
+  @content
+
+=container
+  @extend .container
+  @content
+
+=container-fluid
+  @extend .container-fluid
+  @content
+
+=col($size, $bp: '', $offset: 0)
+  @if $bp == ''
+    @extend .col-#{$size}
+    @content
+  @else
+    @extend .col-#{$bp}-#{$size}
+    @content
+  @if $offset > 0
+    @extend .offset-#{$bp}-#{$offset}
