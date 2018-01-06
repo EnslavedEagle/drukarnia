@@ -1,0 +1,24 @@
+.section-contact
+  min-height: 100vh
+
+  +e('logo')
+    +e('text')
+      color: $color-main
+
+  .owner-info, .workshop-info
+    +e('name')
+      font-family: $font-paragraph
+      text-transform: uppercase
+    +e('address')
+      font-style: normal
+      font-weight: 200
+      padding: 0 1.5rem
+      +md
+        padding: 0 2rem
+      +lg
+        padding: 0 3rem
+    +e('link')
+      color: $color-text
+      text-decoration: none
+      &:hover
+        text-decoration: underline

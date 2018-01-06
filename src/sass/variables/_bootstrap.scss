@@ -1,0 +1,23 @@
+// Here you can replace Bootstrap's default values.
+// Uncomment what needed
+
+/* NOTE: This file is in SCSS syntax, because the Sass syntax doesn't allow the use 
+ * of multiline map variables.
+ */
+
+// Breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 1100px,
+  xl: 1400px
+);
+
+// Container's widths
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 1024px,
+  xl: 1280px
+);

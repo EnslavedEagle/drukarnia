@@ -1,0 +1,52 @@
+@keyframes toScale1
+  from
+    transform: translateX(-50%) scaleX(0)
+  to
+    transform: translateX(-50%) scaleX(1)
+
+.navbar
+  background-color: rgba(255, 255, 255, .8)
+  +e('list')
+    font-size: 1.3em
+    font-weight: bold
+    +e('item')
+      +e('link')
+        text-decoration: none
+        &, &:visited, &:active, &:link
+          color: $color-main
+        &:hover
+          color: lighten($color-main, 10%)
+      +sm
+        +m-e('active', 'link')
+          position: relative
+          &::before
+            content: ''
+            display: block
+            position: absolute
+            top: -6px
+            left: 50%
+            transform: translateX(-50%) scaleX(0)
+            width: 60px
+            border-bottom: 2px solid $color-main
+            animation: toScale1 .75s forwards
+
+  +md
+    border-bottom: 2px solid rgba(0, 0, 0, .05)
+
+#navigation_open + label
+  border: 2px solid $color-main
+  border-radius: 8px
+  width: 2.5rem
+  height: 2.5rem
+  text-align: center
+  &::after
+    display: block
+    content: '≡'
+    color: $color-main
+    font-size: 2rem
+    transform: scale(1.5, 1.2)
+    margin: -60% 0 0
+  &:hover
+    border-color: lighten($color-main, 10%)
+    &::after
+      color: lighten($color-main, 10%)

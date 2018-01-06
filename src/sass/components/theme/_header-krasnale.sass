@@ -1,0 +1,49 @@
+=krasnal($width, $height, $offset_direction, $offset_amount)
+  width: $width
+  height: $height
+  @if $offset_direction = 'right'
+    right: $offset_amount
+  @else
+    left: $offset_amount
+
+.site-header
+  +e('content')
+    &::after, &::before
+      display: block
+      content: ''
+      background-repeat: no-repeat
+      +xsm
+        position: static
+        background-size: contain
+        width: 200px
+        height: 200px
+        margin: 0 auto
+        background-position: center center
+      +sm
+        position: absolute
+        background-size: cover
+        z-index: -1
+        opacity: .9
+        bottom: 0
+    &::before
+      background-image: url('img/krasnal-lewy.jpg')
+      +sm
+        +krasnal(400px, 300px, 'left', 480px)
+        top: 20px
+        background-position: top right
+      +md
+        +krasnal(400px, 750px, 'left', 450px)
+      +lg
+        +krasnal(450px, 750px, 'left', 480px)
+      +xl
+        +krasnal(600px, 750px, 'left', 550px)
+    &::after
+      background-image: url('img/krasnal-prawy.jpg')
+      background-position: top right
+      +sm
+        +krasnal(900px, 750px, 'right', -600px)
+        top: 20px
+      +md
+        +krasnal(850px, 750px, 'right', -600px)
+      +lg
+        +krasnal(950px, 750px, 'right', -600px)

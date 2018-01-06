@@ -7,3 +7,19 @@
 =m($modifier)
   &--#{$modifier}
     @content
+
+/**
+ * BEM's child of element with modifier
+ * Example:
+ *
+ * +e('screenshot')
+ *   +m-e('big', 'image')
+ *
+ * Translates to:
+ *
+ * .screenshot--big .screenshot__image
+ *
+ */
+=m-e($modifier, $element)
+  &--#{$modifier} &__#{$element}
+    @content

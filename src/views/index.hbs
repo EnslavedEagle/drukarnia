@@ -4,12 +4,19 @@
     <title>{{title}}</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Mukta+Malar:400,800" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface&amp;subset=latin-ext">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
 
-    
+    {{>partials/navigation}}
+    {{>partials/header}}
+    <main class="site-content">
+      {{>partials/oferta}}
+      {{>partials/historia}}
+      {{>partials/kontakt}}
+    </main>
+    {{>partials/footer}}
 
     <script src="bundle.js"></script>
   </body>

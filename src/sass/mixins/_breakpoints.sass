@@ -1,15 +1,19 @@
 =xsm()
-  @media(max-width: 767px)
+  @media(max-width: map-get($grid-breakpoints, 'sm') - 1px)
     @content
 
 =sm()
-  @media(min-width: 768px)
+  @media(min-width: map-get($grid-breakpoints, 'sm'))
     @content
 
 =md()
-  @media(min-width: 1024px)
+  @media(min-width: map-get($grid-breakpoints, 'md'))
     @content
 
 =lg()
-  @media(min-width: 1600px)
+  @media(min-width: map-get($grid-breakpoints, 'lg'))
+    @content
+
+=xl()
+  @media(min-width: map-get($grid-breakpoints, 'xl'))
     @content

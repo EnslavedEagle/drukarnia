@@ -1,0 +1,43 @@
+.section-contact
+  +row
+
+  padding-bottom: 4rem
+
+  +e('logo')
+    +col(4, 'sm', 4)
+    display: flex
+    justify-content: center
+    align-items: center
+    +e('image')
+      display: block
+      width: 100px
+      height: auto
+      padding: .5rem .5rem
+    +e('text')
+      font-family: 'Abril Fatface', serif
+      +m('big')
+        font-size: 2.6rem
+      +m('small')
+        font-size: 1.2rem
+  
+  +e('owner')
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin: 10vh auto 0
+    +md
+      flex-direction: row
+    +e('photo')
+      display: block
+      width: 140px
+      height: 140px
+      margin: 1.5rem 1.5rem 0 0
+
+  .owner-info, .workshop-info
+    width: 100%
+    +e('name')
+      margin: .5rem 0
+    +md
+      min-width: 300px
+    +lg
+      min-width: 400px

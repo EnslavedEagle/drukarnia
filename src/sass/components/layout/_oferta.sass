@@ -1,0 +1,29 @@
+.section-offer
+  +row
+  +section
+
+  flex-direction: column
+
+  padding-top: 200px
+
+  +e('heading')
+    text-align: center
+  
+  +e('description')
+    +col(12, 'sm')
+    +col(8, 'md', 2)
+  
+  +e('gallery')
+    +row
+
+    padding: 0
+
+    +e('item')
+      +col(12, 'sm')
+      +col(4, 'md')
+
+      list-style-type: none
+      padding: 10px
+  
+  +e('gallery-description')
+    text-align: right

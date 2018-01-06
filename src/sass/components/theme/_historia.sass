@@ -1,0 +1,30 @@
+.section-history
+  +e('item')
+    +e('heading')
+      color: #404040
+      font-family: $font-paragraph
+      font-size: .8em
+      text-transform: uppercase
+      letter-spacing: 1.3px
+      margin: 2rem 0 0 0
+      +xsm
+        font-size: .6em
+      &::after
+        content: ''
+        display: block
+        width: 80%
+        margin: 1rem auto
+        border-bottom: 2px solid $color-main
+    +e('description')
+      line-height: 1.4em
+      max-width: 90%
+      margin: 0 auto
+    +e('link')
+      text-decoration: none
+      color: $color-accent
+      font-weight: bold
+      text-transform: uppercase
+      letter-spacing: 1.4px
+      margin-top: 1.5rem
+    +m-e('big', 'image')
+      max-width: 90%

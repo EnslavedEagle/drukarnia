@@ -1,0 +1,42 @@
+.section-history
+  +row
+  +section
+
+  padding-top: 100px
+
+  +e('item')
+    +col(12, 'sm')
+    +col(10, 'md', 1)
+    +col(4, 'lg')
+
+    padding-bottom: 2rem
+
+    +m('big')
+      +col(8, 'md')
+
+    +e('image')
+      display: block
+      height: 180px
+      margin: 0 auto
+
+    +m-e('big', 'image')
+      height: auto
+      width: 100%
+
+    +e('heading')
+      text-align: center
+      margin: 1rem 0 2rem
+      white-space: nowrap
+
+      +xsm
+        font-size: 1.4em
+
+      +sm
+        font-size: 1.6em
+
+      +md
+        font-size: 1.1em
+
+    +e('link')
+      display: block
+      text-align: right
