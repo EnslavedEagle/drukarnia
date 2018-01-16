@@ -1,0 +1,75 @@
+.util-animated
+  animation-timing-function: cubic-bezier(0,.29,.74,1.01)
+  animation-fill-mode: forwards
+  animation-duration: 1s
+
+=anim($name)
+  @extend .util-animated
+  animation-name: #{$name}
+
+// Left to right
+@keyframes LeftToRight
+  from
+    transform: translateX(-200px)
+  to
+    transform: translateX(0px)
+
+@keyframes LeftToRightFadeIn
+  from
+    opacity: 0
+    transform: translateX(-200px)
+  to
+    opacity: 1
+    transform: translateX(0px)
+
+// Right to left
+@keyframes RightToLeft
+  from
+    transform: translateX(200px)
+  to
+    transform: translateX(0px)
+
+@keyframes RightToLeftFadeIn
+  from
+    opacity: 0
+    transform: translateX(200px)
+  to
+    opacity: 1
+    transform: translateX(0px)
+
+// Top to bottom
+@keyframes TopToBottom
+  from
+    transform: translateY(-100px)
+  to
+    transform: translateY(0px)
+
+@keyframes TopToBottomFadeIn
+  from
+    opacity: 0
+    transform: translateY(-100px)
+  to
+    opacity: 1
+    transform: translateY(0px)
+
+// Bottom To Top
+@keyframes BottomToTop
+  from
+    transform: translateY(100px)
+  to
+    transform: translateY(0px)
+
+@keyframes BottomToTopFadeIn
+  from
+    opacity: 0
+    transform: translateY(100px)
+  to
+    opacity: 1
+    transform: translateY(0px)
+
+// Fade in
+@keyframes FadeIn
+  from
+    opacity: 0
+  to
+    opacity: 1

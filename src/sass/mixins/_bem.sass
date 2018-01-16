@@ -8,6 +8,10 @@
   &--#{$modifier}
     @content
 
+=nm($modifier)
+  &:not(&--#{$modifier})
+    @content
+
 /**
  * BEM's child of element with modifier
  * Example:
@@ -22,4 +26,21 @@
  */
 =m-e($modifier, $element)
   &--#{$modifier} &__#{$element}
+    @content
+
+/**
+ * Child of element that has a class
+ * that is not related to BEM's structure.
+ *
+ */
+=c-e($class, $element)
+  &.#{$class} &__#{$element}
+    @content
+
+/**
+ * Opposite of the above: child of element
+ * that DOES NOT have a class
+ */
+=nc-e($class, $element)
+  &:not(.#{$class}) &__#{$element}
     @content

@@ -1,0 +1,101 @@
+@import '../utilities/animations'
+
+.site-header
+  // Heading
+  +c-e('off-screen', 'content__heading')
+    transform: translateY(-100px)
+    opacity: 0
+  +nc-e('off-screen', 'content__heading')
+    +anim('TopToBottomFadeIn')
+    
+  // Lines
+  +c-e('off-screen', 'content__description')
+    &::before
+      transform: translateX(-200px)
+    &::after
+      transform: translateX(200px)
+  +nc-e('off-screen', 'content__description')
+    &::before
+      +anim('LeftToRight')
+    &::after
+      +anim('RightToLeft')
+        
+  // Dwarves
+  +c-e('off-screen', 'content')
+    &::before
+      opacity: 0
+      transform: translateX(-200px)
+    &::after
+      opacity: 0
+      transform: translateX(200px)
+  +nc-e('off-screen', 'content')
+    &::before
+      +anim('LeftToRightFadeIn')
+    &::after
+      +anim('RightToLeftFadeIn')
+
+.section-offer
+  +c-e('off-screen', 'heading')
+    transform: translateY(-100px)
+    opacity: 0
+  +nc-e('off-screen', 'heading')
+    +anim('TopToBottomFadeIn')
+  
+  +c-e('off-screen', 'description')
+    transform: translateY(-100px)
+    opacity: 0
+  +nc-e('off-screen', 'description')
+    +anim('TopToBottomFadeIn')  
+  
+  +c-e('off-screen', 'gallery')
+    transform: translateY(100px)
+    opacity: 0
+  +nc-e('off-screen', 'gallery')
+    +anim('BottomToTopFadeIn')
+  +c-e('off-screen', 'gallery-description')
+    transform: translateY(100px)
+    opacity: 0
+  +nc-e('off-screen', 'gallery-description')
+    +anim('BottomToTopFadeIn')
+
+.section-history
+  +e('item')
+    &.off-screen
+      &:nth-child(1)
+        transform: translateX(-100px)
+        opacity: 0
+      &:nth-child(2)
+        transform: translateY(-100px)
+        opacity: 0
+      &:nth-child(3)
+        transform: translateX(100px)
+        opacity: 0
+      &:nth-child(4)
+        transform: translateX(-100px)
+        opacity: 0
+      &:nth-child(5)
+        transform: translateX(100px)
+        opacity: 0
+    &:not(.off-screen)
+      &:nth-child(1)
+        +anim('LeftToRightFadeIn')
+      &:nth-child(2)
+        +anim('TopToBottomFadeIn')
+      &:nth-child(3)
+        +anim('RightToLeftFadeIn')
+      &:nth-child(4)
+        +anim('LeftToRightFadeIn')
+      &:nth-child(5)
+        +anim('RightToLeftFadeIn')
+
+.section-contact
+  +c-e('off-screen', 'logo')
+    transform: translateY(-100px)
+    opacity: 0
+  +nc-e('off-screen', 'logo')
+    +anim('TopToBottomFadeIn')
+  +c-e('off-screen', 'owner')
+    transform: translateY(100px)
+    opacity: 0
+  +nc-e('off-screen', 'owner')
+    +anim('BottomToTopFadeIn')
